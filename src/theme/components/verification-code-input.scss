@@ -1,0 +1,142 @@
+@use '../common/var.scss' as *;
+
+.verification-code-input {
+  position: relative;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: $spacing-base;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: $border-radius;
+  padding: $spacing-base;
+  width: 100%;
+
+  img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+  }
+
+  &:hover {
+    border-color: $border-color-hover;
+  }
+
+  input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: $font-size-base;
+  }
+}
+
+.sm-verification-code {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $spacing-large;
+  flex: 1;
+
+  &__field {
+    padding: $spacing-base;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: $border-radius;
+    font-size: $font-size-base;
+    height: $input-height;
+    transition: border-color $transition-duration $transition-timing-function;
+    width: 100%;
+
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+    }
+
+    &.error {
+      border-color: $danger-color;
+    }
+  }
+
+  &__error {
+    color: $danger-color;
+    font-size: $font-size-small;
+    margin-top: $spacing-small;
+    position: absolute;
+    bottom: -15px;
+  }
+}
+
+.send-code {
+  cursor: pointer;
+  display: flex;
+  height: 28px;
+  padding: 0px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background: rgba(51, 51, 51, 0.8);
+  color: #fff;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+
+  &:hover {
+    background: rgba(51, 51, 51, 1);
+  }
+}
+
+.error {
+  border-color: $danger-color;
+}
+
+.is-value {
+  img {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 980px) {
+  .input-container {
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+    border-radius: 0.08rem;
+    padding: 0.15rem 0.2rem;
+    width: 100%;
+
+    img {
+      width: 0.34rem;
+      height: 0.34rem;
+    }
+
+    input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 0.2rem;
+    }
+  }
+
+  .sm-verification-code {
+    &__field {
+      padding: 0.2rem;
+      font-size: 0.24rem;
+      border-radius: 0.08rem;
+      height: 0.7rem;
+    }
+
+    &__error {
+      font-size: 0.18rem;
+      bottom: -0.3rem;
+      position: absolute;
+    }
+  }
+
+  .send-code {
+    font-size: 0.2rem;
+    height: 0.4rem;
+    padding: 0 0.2rem;
+    line-height: 0.22rem;
+  }
+}

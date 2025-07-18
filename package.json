@@ -1,0 +1,100 @@
+{
+  "name": "fg-login",
+  "version": "1.1.1",
+  "author": "yexingda",
+  "description": "sm登录组件 - Vue2纯方法版本/Vue3完整组件版本",
+  "type": "module",
+  "private": false,
+  "license": "ISC",
+  "scripts": {
+    "dev": "vite",
+    "build": "rollup -c",
+    "build:dev": "vite build --mode development",
+    "build:pro": "vite build --mode production",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "firebase": "^10.7.1",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "@nuxt/kit": "^3.14.0",
+    "@nuxt/schema": "^3.14.0",
+    "@rollup/plugin-alias": "^5.1.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@vitejs/plugin-vue": "^4.5.2",
+    "core-js": "^3.43.0",
+    "postcss-custom-properties": "^14.0.4",
+    "postcss-loader": "^8.1.1",
+    "rollup": "^4.9.6",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.71.1",
+    "sass-loader": "^16.0.5",
+    "vite": "^5.0.10"
+  },
+  "files": [
+    "dist",
+    "src",
+    "module.nuxt2.js",
+    "nuxt2.js"
+  ],
+  "main": "./dist/fg-login.umd.cjs",
+  "module": "./dist/fg-login.vue2.esm.js",
+  "unpkg": "./dist/fg-login.umd.cjs",
+  "exports": {
+    ".": {
+      "node": "./dist/fg-login.umd.cjs",
+      "require": "./dist/fg-login.umd.cjs",
+      "import": "./dist/fg-login.vue2.esm.js",
+      "default": "./dist/fg-login.vue2.esm.js"
+    },
+    "./vue2": {
+      "import": "./dist/fg-login.vue2.esm.js",
+      "require": "./dist/fg-login.umd.cjs"
+    },
+    "./vue3": {
+      "import": "./dist/fg-login.es.js"
+    },
+    "./full": {
+      "import": "./dist/fg-login.es.js"
+    },
+    "./methods": {
+      "import": "./dist/fg-login.vue2.esm.js",
+      "require": "./dist/fg-login.umd.cjs"
+    },
+    "./nuxt3": "./src/module.js",
+    "./nuxt": "./src/module.js",
+    "./nuxt2": "./nuxt2.js",
+    "./components/OAuthButton": "./src/components/OAuthButton.vue",
+    "./components/OAuthButtonNuxt2": "./src/components/OAuthButton.nuxt2.vue",
+    "./oauth-button-nuxt2": "./oauth-button-nuxt2.js",
+    "./dist/style.css": "./dist/style.css",
+    "./style.css": "./dist/style.css",
+    "./dist/theme.css": "./dist/theme.css",
+    "./theme.css": "./dist/theme.css",
+    "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "vue": "^2.7.0 || ^3.3.4"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    }
+  },
+  "sideEffects": [
+    "*.css",
+    "*.scss",
+    "./dist/style.css",
+    "dist/style.css",
+    "dist/*.css",
+    "dist/components/**/*.css"
+  ]
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script>
+      const html = document.getElementsByTagName('html')[0];
+      const width = window.innerWidth < 980 ? window.innerWidth : 1200;
+      /* 640 100  320 50 */
+      var fontSize = (width / 750) * 100;
+      if (window.innerWidth > 980) {
+        html.style.fontSize = 14 + 'px';
+      } else {
+        html.style.fontSize = fontSize + 'px';
+      }
+
+      window.onresize = function () {
+        var html = document.getElementsByTagName('html')[0];
+        var width = window.innerWidth < 980 ? window.innerWidth : 980;
+        /* 640 100  320 50 */
+        var fontSize = (width / 750) * 100;
+        if (window.innerWidth > 980) {
+          html.style.fontSize = 14 + 'px';
+        } else {
+          html.style.fontSize = fontSize + 'px';
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

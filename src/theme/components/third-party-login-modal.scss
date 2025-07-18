@@ -1,0 +1,180 @@
+@use '../common/var.scss' as *;
+@use 'sass:color';
+
+.fg-login-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__content {
+    position: relative;
+    width: 90%;
+    max-width: $modal-width;
+    background-color: $background-color;
+    border-radius: $border-radius-large;
+    padding: $modal-padding;
+    box-shadow: $box-shadow-large;
+    z-index: 1001;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-xlarge;
+  }
+
+  &__title {
+    font-size: $font-size-large + 4;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: $text-secondary;
+
+    &:hover {
+      color: $text-primary;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-large;
+  }
+
+  &__email-section {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-large;
+  }
+
+  &__verification {
+    display: flex;
+    gap: $spacing-base;
+  }
+
+  &__send-code {
+    padding: 0 $spacing-large;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    font-size: $font-size-small;
+    white-space: nowrap;
+    height: $input-height;
+    transition: background-color $transition-duration
+      $transition-timing-function;
+
+    &:hover:not(:disabled) {
+      background-color: color.scale($primary-color, $lightness: -5%);
+    }
+
+    &:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    padding: $spacing-base;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: $border-radius;
+    font-size: $font-size-base + 2;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color $transition-duration
+      $transition-timing-function;
+    height: $button-height;
+
+    &:hover:not(:disabled) {
+      background-color: color.scale($primary-color, $lightness: -5%);
+    }
+
+    &:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+  }
+
+  &__divider {
+    display: flex;
+    align-items: center;
+    margin: $spacing-base 0;
+
+    &:before,
+    &:after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid $border-color;
+    }
+
+    span {
+      padding: 0 $spacing-base;
+      font-size: $font-size-small;
+      color: $text-secondary;
+    }
+  }
+
+  &__oauth {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-base;
+  }
+}
+
+@media (max-width: 980px) {
+  .fg-login-modal {
+    &__content {
+      padding: 0.3rem;
+    }
+
+    &__title {
+      font-size: 0.28rem;
+    }
+
+    &__close {
+      font-size: 0.34rem;
+    }
+
+    &__send-code {
+      font-size: 0.2rem;
+      padding: 0 0.15rem;
+      height: 0.7rem;
+    }
+
+    &__submit {
+      font-size: 0.24rem;
+      padding: 0.16rem;
+      height: 0.7rem;
+    }
+
+    &__divider span {
+      font-size: 0.2rem;
+    }
+  }
+}

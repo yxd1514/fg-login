@@ -1,0 +1,59 @@
+// fg-login主题变量
+
+// 颜色系统
+$primary-color: #3951d4 !default;
+$secondary-color: #3ad0de !default;
+$success-color: #4caf50 !default;
+$warning-color: #ff9800 !default;
+$danger-color: #f44336 !default;
+$info-color: #2196f3 !default;
+
+// 文字颜色
+$text-primary: rgba(0, 0, 0, 0.87) !default;
+$text-secondary: rgba(0, 0, 0, 0.6) !default;
+$text-hint: rgba(0, 0, 0, 0.38) !default;
+
+// 边框颜色
+$border-color: rgba(0, 0, 0, 0.7) !default;
+$border-color-hover: rgba(0, 0, 0, 0.7) !default;
+
+// 背景颜色
+$background-color: #ffffff !default;
+$background-color-hover: #f5f5f5 !default;
+
+// 字体
+$font-family: 'Poppins', sans-serif !default;
+$font-size-base: 14px !default;
+$font-size-large: 16px !default;
+$font-size-small: 12px !default;
+
+// 边框半径
+$border-radius: 4px !default;
+$border-radius-small: 2px !default;
+$border-radius-large: 8px !default;
+
+// 间距
+$spacing-small: 8px !default;
+$spacing-base: 12px !default;
+$spacing-large: 16px !default;
+$spacing-xlarge: 24px !default;
+
+// 阴影
+$box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !default;
+$box-shadow-large: 0 4px 6px rgba(0, 0, 0, 0.1) !default;
+
+// 过渡
+$transition-duration: 0.3s !default;
+$transition-timing-function: ease !default;
+
+// 断点
+$breakpoint-sm: 576px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 992px !default;
+$breakpoint-xl: 1200px !default;
+
+// 组件特定变量
+$input-height: 50px !default;
+$button-height: 50px !default;
+$modal-width: 450px !default;
+$modal-padding: $spacing-xlarge !default;
