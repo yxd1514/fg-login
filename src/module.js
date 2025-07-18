@@ -9,7 +9,7 @@ import { fileURLToPath } from 'url'
 export default defineNuxtModule({
   meta: {
     name: 'fg-login',
-    configKey: 'smLogin',
+    configKey: 'fgLogin',
     compatibility: {
       nuxt: '^3.0.0'
     }
@@ -70,7 +70,7 @@ export default defineNuxtModule({
     })
 
     // 暴露配置到运行时配置
-    nuxt.options.runtimeConfig.public.smLogin = {
+    nuxt.options.runtimeConfig.public.fgLogin = {
       ...options,
       firebase: options.firebase || {},
       google: options.google || {}

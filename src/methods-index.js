@@ -42,10 +42,10 @@ export { _resetPassword as resetPassword } from './assets/tools/firebase.js'
 export * from './common/utils.js'
 
 // 默认导出对象
-const smLogin = {
+const fgLogin = {
   version: '1.0.17',
   type: 'methods-only',
   components: false
 }
 
-export default smLogin
+export default fgLogin

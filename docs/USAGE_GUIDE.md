@@ -19,7 +19,7 @@ npm install fg-login@1.0.9
 
 ```javascript
 // CommonJS 引入
-const smLogin = require('fg-login')
+const fgLogin = require('fg-login')
 
 // 或者解构引入
 const { GoogleNativeLogin, initGoogleNativeLogin } = require('fg-login')
@@ -48,7 +48,7 @@ initGoogleNativeLogin(
 })
 
 // 2. 使用类实例
-const googleLogin = new smLogin.GoogleNativeLogin()
+const googleLogin = new fgLogin.GoogleNativeLogin()
 googleLogin.setConfig({
   client_id: 'your-google-client-id'
 })

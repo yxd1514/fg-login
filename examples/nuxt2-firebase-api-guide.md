@@ -8,7 +8,7 @@
 // nuxt.config.js
 export default {
   modules: ['fg-login/nuxt2'],
-  smLogin: {
+  fgLogin: {
     firebase: {
       apiKey: 'your-api-key',
       authDomain: 'your-project.firebaseapp.com',
@@ -318,7 +318,7 @@ export default {
     console.log('Firebase 配置:', config)
 
     // 也可以通过插件获取
-    const configFromPlugin = this.$smLogin.getFirebaseConfig()
+    const configFromPlugin = this.$fgLogin.getFirebaseConfig()
     console.log('来自插件的配置:', configFromPlugin)
   }
 }
@@ -604,7 +604,7 @@ export default {
 
 ```javascript
 // 检查配置是否正确加载
-console.log('Firebase 配置:', this.$smLogin.getFirebaseConfig())
+console.log('Firebase 配置:', this.$fgLogin.getFirebaseConfig())
 
 // 检查全局配置
 console.log('全局 Firebase 配置:', window.__FIREBASE_CONFIG__)

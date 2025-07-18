@@ -36,7 +36,7 @@ export { _resetPassword as resetPassword } from './assets/tools/firebase.js'
 export * from './common/utils.js'
 
 // 创建默认导出对象
-const smLoginMethods = {
+const fgLoginMethods = {
   // 核心类
   GoogleNativeLogin: null,
 
@@ -58,16 +58,16 @@ const smLoginMethods = {
 // 动态导入方法（避免循环依赖）
 try {
   const { GoogleNativeLogin } = require('./common/googleNativeLogin.js')
-  smLoginMethods.GoogleNativeLogin = GoogleNativeLogin
+  fgLoginMethods.GoogleNativeLogin = GoogleNativeLogin
 } catch (e) {
   console.warn('GoogleNativeLogin not available in this environment')
 }
 
 try {
   const utils = require('./common/utils.js')
-  smLoginMethods.utils = utils
+  fgLoginMethods.utils = utils
 } catch (e) {
   console.warn('Utils not available in this environment')
 }
 
-export default smLoginMethods
+export default fgLoginMethods

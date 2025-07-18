@@ -18,7 +18,7 @@ export default defineNuxtConfig({
   ],
 
   // ⭐ 重要：配置 fg-login 参数
-  smLogin: {
+  fgLogin: {
     firebase: {
       apiKey: 'your-api-key',
       authDomain: 'your-project.firebaseapp.com',
@@ -126,7 +126,7 @@ npm install fg-login
 import { ref, onMounted } from 'vue'
 
 // 导入 Firebase 功能
-const { $smLogin } = useNuxtApp()
+const { $fgLogin } = useNuxtApp()
 
 const configStatus = ref({
   firebase: { loaded: false },
@@ -147,12 +147,12 @@ const checkConfiguration = () => {
     const runtimeConfig = useRuntimeConfig()
 
     // 检查 Firebase 配置
-    if (runtimeConfig.public.smLogin?.firebase?.apiKey) {
+    if (runtimeConfig.public.fgLogin?.firebase?.apiKey) {
       configStatus.value.firebase.loaded = true
     }
 
     // 检查 Google 配置
-    if (runtimeConfig.public.smLogin?.google?.client_id) {
+    if (runtimeConfig.public.fgLogin?.google?.client_id) {
       configStatus.value.google.loaded = true
     }
 
@@ -352,7 +352,7 @@ npm install fg-login@latest
 ```typescript
 export default defineNuxtConfig({
   modules: ['fg-login/nuxt'],
-  smLogin: {
+  fgLogin: {
     // 您的配置...
   }
 })

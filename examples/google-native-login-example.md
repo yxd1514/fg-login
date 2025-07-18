@@ -11,7 +11,7 @@ Google 原生登录是 **可选功能**，只有在需要时才配置。
 ```typescript
 export default defineNuxtConfig({
   modules: ['fg-login/nuxt'],
-  smLogin: {
+  fgLogin: {
     firebase: {
       apiKey: 'your-api-key',
       authDomain: 'your-project.firebaseapp.com',
@@ -36,7 +36,7 @@ export default defineNuxtConfig({
 ```typescript
 export default defineNuxtConfig({
   modules: ['fg-login/nuxt'],
-  smLogin: {
+  fgLogin: {
     firebase: {
       // 只配置 Firebase，不配置 Google
       apiKey: 'your-api-key',
@@ -239,16 +239,16 @@ import { ref, onMounted } from 'vue'
 const googleButtonRef = ref(null)
 const initError = ref('')
 
-const { $smLogin } = useNuxtApp()
+const { $fgLogin } = useNuxtApp()
 
 const handleGoogleLogin = (credential) => {
   console.log('Google登录成功:', credential)
 }
 
 onMounted(async () => {
-  if (googleButtonRef.value && $smLogin.googleNativeLogin) {
+  if (googleButtonRef.value && $fgLogin.googleNativeLogin) {
     try {
-      const success = await $smLogin.googleNativeLogin.renderButton({
+      const success = await $fgLogin.googleNativeLogin.renderButton({
         element: googleButtonRef.value,
         callback: handleGoogleLogin
       })
@@ -437,7 +437,7 @@ onMounted(async () => {
 
 ### 场景 2：需要 Google 登录
 
-在 `nuxt.config.ts` 中配置 `smLogin.google.client_id`，调用 `initGoogleNativeLogin` 会返回 `true` 并渲染按钮。
+在 `nuxt.config.ts` 中配置 `fgLogin.google.client_id`，调用 `initGoogleNativeLogin` 会返回 `true` 并渲染按钮。
 
 ### 场景 3：动态配置
 
@@ -460,7 +460,7 @@ onMounted(async () => {
 
 如果你遇到这个错误，可以按以下步骤排查：
 
-1. **检查配置文件** - 确保在 `nuxt.config.ts` 中正确配置了 `smLogin.google.client_id`
+1. **检查配置文件** - 确保在 `nuxt.config.ts` 中正确配置了 `fgLogin.google.client_id`
 2. **使用调试组件** - 导入并使用调试组件来查看详细信息
 
 ```vue
@@ -482,7 +482,7 @@ import DebugGoogleConfig from 'fg-login/examples/DebugGoogleConfig.vue'
 
 #### 2. 配置检查清单
 
-- ✅ `nuxt.config.ts` 中有 `smLogin.google.client_id` 配置
+- ✅ `nuxt.config.ts` 中有 `fgLogin.google.client_id` 配置
 - ✅ Google Client ID 格式正确（以 `.apps.googleusercontent.com` 结尾）
 - ✅ 模块正确加载：`modules: ['fg-login/nuxt']`
 - ✅ 在客户端环境下调用（`onMounted` 中）

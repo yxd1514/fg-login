@@ -11,7 +11,7 @@ export default {
   ],
 
   // ⭐ 重要：配置 fg-login 参数
-  smLogin: {
+  fgLogin: {
     firebase: {
       apiKey: 'your-api-key',
       authDomain: 'your-project.firebaseapp.com',

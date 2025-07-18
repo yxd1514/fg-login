@@ -8,7 +8,7 @@
 // nuxt.config.js
 export default {
   modules: ['fg-login/nuxt2'],
-  smLogin: {
+  fgLogin: {
     firebase: {
       apiKey: 'your-api-key',
       authDomain: 'your-project.firebaseapp.com',
@@ -261,7 +261,7 @@ export default {
 
   async mounted() {
     // 通过插件访问配置
-    const googleConfig = this.$smLogin.getGoogleConfig()
+    const googleConfig = this.$fgLogin.getGoogleConfig()
     console.log('📋 Google 配置:', googleConfig)
 
     if (googleConfig && this.$refs.googleButton) {
@@ -425,7 +425,7 @@ app.post('/api/auth/google', async (req, res) => {
 
 ### 1. 按钮不显示
 
-- 检查 `nuxt.config.js` 中的 `smLogin.google.client_id` 配置
+- 检查 `nuxt.config.js` 中的 `fgLogin.google.client_id` 配置
 - 确保在 `mounted()` 中调用初始化函数
 - 检查浏览器控制台的错误信息
 
@@ -434,8 +434,8 @@ app.post('/api/auth/google', async (req, res) => {
 ```javascript
 // 在组件中检查配置
 mounted() {
-  console.log('🔍 smLogin 服务:', this.$smLogin)
-  console.log('🔍 Google 配置:', this.$smLogin.getGoogleConfig())
+  console.log('🔍 fgLogin 服务:', this.$fgLogin)
+  console.log('🔍 Google 配置:', this.$fgLogin.getGoogleConfig())
 }
 ```
 

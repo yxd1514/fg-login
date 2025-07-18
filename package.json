@@ -1,6 +1,6 @@
 {
   "name": "fg-login",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "yexingda",
   "description": "sm登录组件 - Vue2纯方法版本/Vue3完整组件版本",
   "type": "module",

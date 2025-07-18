@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     // ... 您的其他样式文件保持不变
   ],
 
-  smLogin: {
+  fgLogin: {
     // 您的配置保持不变
   }
 })

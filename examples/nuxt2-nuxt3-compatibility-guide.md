@@ -27,7 +27,7 @@ npm install fg-login
 export default defineNuxtConfig({
   modules: ['fg-login/nuxt'],
 
-  smLogin: {
+  fgLogin: {
     firebase: {
       apiKey: 'your-api-key',
       authDomain: 'your-project.firebaseapp.com',
@@ -189,7 +189,7 @@ npm install fg-login
 export default {
   modules: ['fg-login/nuxt2'],
 
-  smLogin: {
+  fgLogin: {
     firebase: {
       apiKey: 'your-api-key',
       authDomain: 'your-project.firebaseapp.com',
@@ -407,7 +407,7 @@ export default {
 
 4. **Firebase 配置错误**
    ```
-   ✅ 解决方案：检查 nuxt.config 中的 smLogin.firebase 配置
+   ✅ 解决方案：检查 nuxt.config 中的 fgLogin.firebase 配置
    ```
 
 ### 验证安装

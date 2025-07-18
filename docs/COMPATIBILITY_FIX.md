@@ -25,8 +25,8 @@
 ```javascript
 // 使用可选链操作符 (ES2020)
 window.google?.accounts.id.initialize({})
-smLoginConfig?.firebase
-runtimeConfig.public?.smLogin?.google?.client_id
+fgLoginConfig?.firebase
+runtimeConfig.public?.fgLogin?.google?.client_id
 ```
 
 #### 修复后：
@@ -36,11 +36,11 @@ runtimeConfig.public?.smLogin?.google?.client_id
 if (window.google && window.google.accounts && window.google.accounts.id) {
   window.google.accounts.id.initialize({})
 }
-;(smLoginConfig && smLoginConfig.firebase)(
+;(fgLoginConfig && fgLoginConfig.firebase)(
   runtimeConfig.public &&
-    runtimeConfig.public.smLogin &&
-    runtimeConfig.public.smLogin.google &&
-    runtimeConfig.public.smLogin.google.client_id
+    runtimeConfig.public.fgLogin &&
+    runtimeConfig.public.fgLogin.google &&
+    runtimeConfig.public.fgLogin.google.client_id
 )
 ```
 
