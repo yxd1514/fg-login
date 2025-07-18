@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
-import { fileURLToPath, URL } from 'node:url';
-import { resolve } from 'path';
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import { fileURLToPath, URL } from 'node:url'
+import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -22,7 +22,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'SmLoginSignin',
-      fileName: (format) => `sm-login-signin.${format}.js`
+      fileName: (format) => `fg-login-signin.${format}.js`
     },
     rollupOptions: {
       external: ['vue'],
@@ -33,4 +33,4 @@ export default defineConfig({
       }
     }
   }
-});
+})
